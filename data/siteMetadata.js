@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Yan'Log',
+  title: 'Yan.Log',
   author: 'Yan Lu',
   headerTitle: 'YanBlog',
   description: 'Personal Blogs for AIGC Systems',
