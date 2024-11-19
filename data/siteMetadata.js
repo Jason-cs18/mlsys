@@ -2,7 +2,7 @@
 const siteMetadata = {
   title: "Yan'Log",
   author: 'Yan Lu',
-  headerTitle: 'Yan'Log',
+  headerTitle: "Yan'Log",
   description: 'Blogs for AIGC Systems and Avatar',
   language: 'en-us',
   theme: 'system', // system, dark or light
