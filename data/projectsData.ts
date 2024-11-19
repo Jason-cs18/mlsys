@@ -18,6 +18,12 @@ const projectsData: Project[] = [
     imgSrc: '/static/images/time-machine.jpg',
     href: '/blog/the-time-machine',
   },
+  {
+    title: 'Serving Diffusion Models on Heterogeneous Devices',
+    description: `Efficiently serving large diffusion models on heterogeneous devices`,
+    imgSrc: '/static/images/time-machine.jpg',
+    href: '/blog/the-time-machine',
+  },
 ]
 
 export default projectsData
