@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Yan.Log',
   author: 'Yan Lu',
   headerTitle: 'YanBlog',
-  description: 'Personal Blogs for AIGC Systems',
+  description: 'Blogs for AIGC Systems',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://jason-cs18.github.io/mlsys/',
