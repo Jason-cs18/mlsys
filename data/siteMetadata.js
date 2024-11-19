@@ -1,9 +1,9 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Yan.Log',
+  title: "Yan'Log",
   author: 'Yan Lu',
-  headerTitle: 'YanBlog',
-  description: 'Blogs for AIGC Systems',
+  headerTitle: 'Yan'Log',
+  description: 'Blogs for AIGC Systems and Avatar',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://jason-cs18.github.io/mlsys/',
