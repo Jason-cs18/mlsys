@@ -6,7 +6,7 @@ draft: false
 summary: 'Mathematics for building a successful deep learning application'
 ---
 
-# Mathematics for deep learning
+
 Mathematics is the foundation of deep learning. It is important to have a solid understanding of the mathematical concepts that are used in deep learning. This includes linear algebra, calculus, probability, and statistics. In this article, we will cover some of the key mathematical concepts that are used in deep learning.
 
 ## Math notation
@@ -116,20 +116,61 @@ The learning rate is denoted by $\eta$.
 
 The convolution operation is denoted by $*$.
 
-### Others
-
 ## Probability and statistics
 
 ### Prior and posterior
+- Prior Probability $P(A)$: This is the pre-existing estimate of the probability of an event or hypothesis before new information is obtained. It is based on existing knowledge and experience, without considering any additional information. For example, the probability of getting heads when flipping a fair coin is 0.5 without any additional information.
+- Posterior Probability $P(A|B)$: This is the updated probability of an event or hypothesis after new information is obtained. It is based on the prior probability and the new information, calculated using Bayes' theorem. For example, if a coin has been flipped 10 times and each time it landed heads, the posterior probability of getting heads would increase according to Bayes' theorem.
+### Bayesian theorem
 
-### Bayesian inference
+$P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} $
 
-### Likelihood function
+### Maximum likelihood estimation
+
+$f(\mathbf{x}; \theta)$  
+
+$( \mathcal{D} = {(\mathbf{x}_1, y_1), (\mathbf{x}_2, y_2), ..., (\mathbf{x}_n, y_n)} )$
+
+$\hat{y}_i = f(\mathbf{x}_i; \theta)$
+
+$L(\theta) = \prod_{i=1}^n p(y_i | \mathbf{x}_i, \theta)$ where $p(y_i | \mathbf{x}_i, \theta$) is the probability of observing the ( i )-th true label ( $y_i$ ) given the ( i )-th input data point ( $\mathbf{x}_i$ ) and the model parameters ( $\theta$ ).
 
 ### Gaussian distribution
 
+The Gaussian distribution, also known as the normal distribution, is a continuous probability distribution characterized by its bell-shaped curve. It is defined by two parameters: the mean ( $\mu$ ) and the standard deviation ( $\sigma$ ).
+
+The probability density function (PDF) of a Gaussian distribution is given by:
+
+$f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$
+
+where:
+
+( $x$ ) is the random variable.
+( $\mu$ ) is the mean of the distribution.
+( $\sigma$ ) is the standard deviation of the distribution.
+( $e$ ) is the base of the natural logarithm.
+
+
 ### Gaussian mixture models
 
+Gaussian Mixture Models (GMMs) are probabilistic models that assume that the data is generated from a mixture of several Gaussian distributions. Each Gaussian distribution is called a component, and the mixture model represents the probability of each data point belonging to each component.
+
+The GMM is defined by the following parameters:
+
+Number of Components ($K$): The number of Gaussian components in the mixture model.
+Component Means (($\mu_1, \mu_2, ..., \mu_K$)): The mean of each Gaussian component.
+Component Covariances (($\Sigma_1, \Sigma_2, ..., \Sigma_K$)): The covariance matrix of each Gaussian component.
+Component Weights (($\pi_1, \pi_2, ..., \pi_K$)): The weight of each Gaussian component, which represents the probability of a data point belonging to that component.
+The GMM is characterized by the following probability density function:
+
+$P(\mathbf{x} | \theta) = \sum_{k=1}^K \pi_k \mathcal{N}(\mathbf{x} | \mu_k, \Sigma_k)$
+
+where:
+
+( $\mathbf{x}$ ) is the data point.
+( $\theta$ ) is the set of GMM parameters.
+( $\pi_k$ ) is the weight of the ( $k$ )-th component.
+( $\mathcal{N}(\mathbf{x} | \mu_k, \Sigma_k$) ) is the probability density function of the ( $k$ )-th Gaussian component.
 
 ## References
 1. [Suggested Notation for Machine Learning](https://github.com/mazhengcn/suggested-notation-for-machine-learning#notation-table)
