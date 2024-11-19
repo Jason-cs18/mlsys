@@ -9,7 +9,7 @@ const projectsData: Project[] = [
   {
     title: 'Efficient Avatar Synthesis',
     description: `Efficiently serving 2D and 3D avatars on mobile phones.`,
-    imgSrc: '/static/images/google.png',
+    imgSrc: '/static/images/time-machine.jpg',
     href: 'https://www.google.com',
   },
   {
@@ -19,8 +19,8 @@ const projectsData: Project[] = [
     href: '/blog/the-time-machine',
   },
   {
-    title: 'Serving Diffusion Models on Heterogeneous Devices',
-    description: `Efficiently serving large diffusion models on heterogeneous devices`,
+    title: 'Efficient Serving Diffusion Models',
+    description: `Accelerating diffusion models inference on heterogeneous devices`,
     imgSrc: '/static/images/time-machine.jpg',
     href: '/blog/the-time-machine',
   },
