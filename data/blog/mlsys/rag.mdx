@@ -8,6 +8,17 @@ summary: 'Empowering large language models with external knowledge.'
 
 Large language models (LLMs) are good at leveraging their learned knowledge to complete tasks. However, their knowledge is obtained from costly training and is often outdated. To address this issue, we can use external knowledge sources to augment the LLMs' knowledge. In this post, we will introduce retrieval augmented generation (RAG), a training-free approach to augment models' knowledge.
 
+<details>
+<summary><b>Table of Contents</b> (click to open)</summary>
+
+- [RAG](#rag)
+- [Building a question-answering system with RAG](#building-a-question-answering-system-with-rag)
+- [Learning to ask via Agentic RAG](#learning-to-ask-via-agentic-rag)
+- [Challenges for RAG](#challenges-for-rag)
+- [References](#references)
+
+</details>
+
 ## RAG
 
 RAG is an architectural approach to improve the efficacy of LLM applications with custom data. In specific, it reterivals data/documents relevant to a question or task and providing them as context for the LLM. RAG is an effective approach to enable LLMs maintain up-to-date external knowledge.
