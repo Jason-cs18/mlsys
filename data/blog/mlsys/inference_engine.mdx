@@ -20,8 +20,8 @@ Running compute/memory-intensive deep learning models is not easy. To reduce the
 ## AI Accelerators
 
 AI芯片需求：
-- 推理：xxx
-- 训练：xxx
+- 推理：quantization, sparse, low power
+- 训练：high memory bandwidth, mixed precision
 
 传统的计算机架构可以分为SISD,SIMD,MISD,MIMD。
 - SISD (Single Instruction, Single Data)
@@ -30,8 +30,20 @@ AI芯片需求：
 - MIMD (Multiple Instruction, Multiple Data)
 
 NVIDIA GPU
+- GPU基本工作原理：GPU架构（存储和计算），GPU如何利用线程进行并行计算。
+- 为什么GPU适合AI：结合计算强度，理解GPU高吞吐架构对AI计算的影响。
+- GPU架构回顾：`#SM`越来越多，计算能力越来越强（搭配最新TensorCore），内存带宽越来越快（搭配最新NVLink）。
 
 Tensor Core, NVLink, and NVSwitch
+
+- Tensor Core
+    - The architecture of Tensor Core
+    - How to use Tensor Core for AI acceleration？ 
+    - How to use Tensor Core in practice？
+- NVLink
+    - The architecture of NVLink
+    - How to use NVLink for AI acceleration？
+    - How to use NVLink in practice？
 
 ## AI Compilers
 
