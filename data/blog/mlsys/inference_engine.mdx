@@ -65,6 +65,27 @@ _[NVSwitch has better scaling](https://chenzomi12.github.io/02Hardware04NVIDIA/0
     - How to use NVSwitch in practice？
 
 ## AI Compilers
+- In PyTorch 2.0, what are native optimizations?
+    - `torch.compile` not only accelerates the inference but also enables fast training.
+- In practice, how to use them?
+    - [Introduction to torch.compile](https://pytorch.org/tutorials/intermediate/torch_compile_tutorial.html#torchdynamo-and-fx-graphs)
+    - [Optimize inference using torch.compile()](https://huggingface.co/docs/transformers/perf_torch_compile)
+
+```python
+t = torch.randn(10, 100)
+
+class MyModule(torch.nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.lin = torch.nn.Linear(100, 10)
+
+    def forward(self, x):
+        return torch.nn.functional.relu(self.lin(x))
+
+mod = MyModule()
+opt_mod = torch.compile(mod)
+print(opt_mod(t))
+```
 
 ## Inference Engine
 
