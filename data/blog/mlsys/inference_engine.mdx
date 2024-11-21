@@ -74,6 +74,7 @@ _[NVSwitch has better scaling](https://chenzomi12.github.io/02Hardware04NVIDIA/0
 ```python
 t = torch.randn(10, 100)
 
+@torch.compile
 class MyModule(torch.nn.Module):
     def __init__(self):
         super().__init__()
@@ -83,7 +84,6 @@ class MyModule(torch.nn.Module):
         return torch.nn.functional.relu(self.lin(x))
 
 mod = MyModule()
-opt_mod = torch.compile(mod)
 print(opt_mod(t))
 ```
 
