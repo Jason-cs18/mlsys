@@ -6,7 +6,7 @@ draft: false
 summary: 'Fundamental concepts and techniques in deep generative models, including variational autoencoders (VAEs), generative adversarial networks (GANs), and normalizing flows.'
 ---
 
-Learning notes for [MIT 6.S978 Fall 2024 Deep Generative Models](https://mit-6s978.github.io/schedule.html). This course provides an in-depth explaination of popular deep generative models with statistical analysis.
+Learning notes for [MIT 6.S978 Fall 2024 Deep Generative Models](https://mit-6s978.github.io/schedule.html). This course provides an in-depth introduction for popular deep generative models.
 
 <details>
 <summary><b>Table of Contents</b> (click to open)</summary>
@@ -23,8 +23,23 @@ Learning notes for [MIT 6.S978 Fall 2024 Deep Generative Models](https://mit-6s9
 
 ## [Introduction](https://mit-6s978.github.io/assets/pdfs/lec1_intro.pdf)
 - What are generative models?
+    - Generative models are models that can generate new data that is similar to the training data. We often use $p(x|y)$ to denote it.
 - What are deep generative models?
+    - Deep generative models are models that map a simple distribution (e.g., Gaussian) to a complex distribution (e.g., images). 
+    - $g(z)\sim p(x)$ where $z\sim \pi$ and $\pi$ is a simple distribution.
 - How to build a deep generative model?
+    - Formulation
+        - formulate a problem as probabilistic modeling
+        - decompose complex distribution into simple and tractable ones
+    - Representation
+        - deep neural networks to represent data and their distributions
+    - Objective function
+        - to measure how good the predicted distribution is
+    - Optimization
+        - optimize the networks and/or the decomposition
+    - Inference
+        - sampler: to produce new samples
+        - probability density estimator (optional)
 
 ## [Variational Autoencoder (VAE)](https://mit-6s978.github.io/assets/pdfs/lec2_vae.pdf)
 - Variational Autoencoder (VAE)
@@ -32,10 +47,14 @@ Learning notes for [MIT 6.S978 Fall 2024 Deep Generative Models](https://mit-6s9
 - Vector Quantized VAE (VQ-VAE)
 
 ### Required readings
-1. xxx
-2. xxx
+1. [ICCV 2021] [From learning models of natural image patches to whole image restoration](https://people.csail.mit.edu/danielzoran/EPLLICCVCameraReady.pdf).
+2. [NeurIPS 2012] [Natural images, Gaussian Mixtures and Dead Leaves](https://legacy.sites.fas.harvard.edu/~cs278/papers/gmm.pdf). 
+3. [CVPR 2018] [Deep Image Prior](https://openaccess.thecvf.com/content_cvpr_2018/papers/Ulyanov_Deep_Image_Prior_CVPR_2018_paper.pdf). 
 
-## Autoregressive (AR) Models
+## [Autoregressive (AR) Models](https://mit-6s978.github.io/assets/pdfs/lec3_ar.pdf)
+
+### Required readings
+1. xxx
 
 ## Generative Adversarial Network (GAN)
 
