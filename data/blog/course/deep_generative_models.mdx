@@ -22,29 +22,55 @@ Learning notes for [MIT 6.S978 Fall 2024 Deep Generative Models](https://mit-6s9
 </details>
 
 ## [Introduction](https://mit-6s978.github.io/assets/pdfs/lec1_intro.pdf)
-- What are generative models?
-    - Generative models are models that can generate new data that is similar to the training data. We often use $p(x|y)$ to denote it.
-- What are deep generative models?
-    - Deep generative models are models that map a simple distribution (e.g., Gaussian) to a complex distribution (e.g., images). 
-    - $g(z)\sim p(x)$ where $z\sim \pi$ and $\pi$ is a simple distribution.
-- How to build a deep generative model?
-    - Formulation
-        - formulate a problem as probabilistic modeling
-        - decompose complex distribution into simple and tractable ones
-    - Representation
-        - deep neural networks to represent data and their distributions
-    - Objective function
-        - to measure how good the predicted distribution is
-    - Optimization
-        - optimize the networks and/or the decomposition
-    - Inference
-        - sampler: to produce new samples
-        - probability density estimator (optional)
+
+Generative models are models that can generate new data that is similar to the training data $p(x)$. Since $p(x)$ is complex and difficult to work with, we often decompose it into simpler and more manageable components. For example, modeling the distribution of face data can be challenging, but modeling the distribution of pose data is much easier. To effectively learn a mapping function, we often use deep neural networks, which are excellent at capturing data distributions.
+
+In mathematics, we can express the generative process as
+$$g_{\theta}(z)\sim p(x)$$ where $g_{\theta}$ denotes the mapping function and $z$ is a latent variable.
+
+
+In practice, we build deep generative models by following these steps:
+
+- **Formulation**: Formulate a problem as a probabilistic modeling task, such as $p(x|y)$. Decompose the complex distribution into simpler and more tractable components, such as $z$.
+
+- **Representation**: Use deep neural networks to represent the data and their distributions. Deep neural networks are excellent at capturing data distributions.
+
+- **Objective Function**: Define an objective function to measure how well the predicted distribution matches the true distribution. This objective function is crucial for evaluating the performance of the model.
+
+- **Optimization**: Optimize the neural networks and/or the decomposition to minimize the objective function. This involves training the model using a suitable optimization algorithm, such as stochastic gradient descent.
+
+- **Inference**: Use a sampler to produce new samples from the model. Optionally, use a probability density estimator to estimate the density of the generated samples. This can be useful for tasks such as anomaly detection or density estimation.
+
 
 ## [Variational Autoencoder (VAE)](https://mit-6s978.github.io/assets/pdfs/lec2_vae.pdf)
-- Variational Autoencoder (VAE)
-- Relation to Expectation-Maximization (EM)
+
+Overview
+- How to model $p(x)$ with a statistical model?
+- How to use VAE to complete this task?
+- Extension to EM
 - Vector Quantized VAE (VQ-VAE)
+- Code sample for VAE and VQ-VAE
+
+### Generative models
+$z\sim p(z)$ (latent variables) -> $p(x|z)$ (generator) -> $x$ (data)
+- $z$: pose, size, color, breed, ...
+- $x$: image, audio, video, ...
+
+Neural networks aim to find $\theta$ that satisfing $p_{\theta}(x|z)\sim p(x)$.
+- Loss function (reconstruction loss): $\min\limits_{\theta}\mathcal{D}_{KL}(p_{data}|p_{\theta})$ => $\max\limits_{\theta}\mathbb{E_{x\sim p_{data}}}\log p_{\theta}(x)$
+
+Mathematics proofs
+$$
+\begin{equation}
+\begin{aligned}
+&\arg \min\limits_{\theta}\mathcal{D}_{KL}(p_{data}|p_{\theta})\\
+&= \arg \min\limits_{\theta}\sum\limits_{x}p_{data}(x)log\frac{p_{data}(x)}{p_{\theta}(x)}\\
+&= \arg \min\limits_{\theta}\sum\limits_{x}-p_{data}(x)\log p_{\theta}(x)+constant\\
+&= \arg \max\limits_{\theta}\sum\limits_{x}p_{data}(x)\log p_{\theta}(x)\\
+&= \max\limits_{\theta}\mathbb{E_{x\sim p_{data}}}\log p_{\theta}(x)
+\end{aligned}
+\end{equation}
+$$
 
 ### Required readings
 1. [ICCV 2021] [From learning models of natural image patches to whole image restoration](https://people.csail.mit.edu/danielzoran/EPLLICCVCameraReady.pdf).
