@@ -6,14 +6,16 @@ draft: false
 summary: 'Empowering large language models with external knowledge.'
 ---
 
-Large language models (LLMs) are good at leveraging their learned knowledge to complete tasks. However, their knowledge is obtained from costly training and is often outdated. To address this issue, we can use external knowledge sources to augment the LLMs' knowledge. In this post, we will introduce retrieval augmented generation (RAG), a training-free approach to augment models' knowledge.
+Large language models (LLMs) are good at leveraging their learned knowledge to complete tasks. However, their knowledge is obtained from costly training and is often outdated. To address this issue, we can use external knowledge sources to augment the LLMs' knowledge. 
+
+In this post, we introduce retrieval augmented generation (RAG), a training-free approach to augment models' knowledge.
 
 <details>
 <summary><b>Table of Contents</b> (click to open)</summary>
 
 - [RAG](#rag)
 - [Building a question-answering system with RAG](#building-a-question-answering-system-with-rag)
-- [Learning to ask via Agentic RAG](#learning-to-ask-via-agentic-rag)
+- [Learning to answer complex questions with Agentic RAG](#learning-to-answer-complex-questions-with-agentic-rag)
 - [Challenges for RAG](#challenges-for-rag)
 - [References](#references)
 
@@ -30,11 +32,26 @@ _image source: [What Is Retrieval Augmented Generation, or RAG?](https://www.dat
 ## Building a question-answering system with RAG
 As illustrated above, RAG consists of 4 steps: data preparation, index relevant data, information retrieval, and LLM inference. In this section, we will use LlamaIndex to build a simple question-answering system with RAG. LlamaIndex is a framework for building context-augmented LLM applications.
 
-## Learning to ask via Agentic RAG
-A simple RAG depends on the searched context. However, the context is not always retrieved correctly due to inaccurate questions. To address this issue, we can use Agentic RAG to improve the performance of RAG. Agentic RAG is a framework that enables LLMs to reformulate their queries and self-query to improve the performance of RAG.
+In this section, we build a simple question-answering system with RAG. The code is available [here](https://github.com/llamaindex/llamaindex/blob/main/examples/rag/rag.py).
+
+## Learning to answer complex questions with Agentic RAG
+
+![](https://weaviate.io/assets/images/hero-268297857fbb3e989edd6e7c9a6c884c.png)
+_image sources: [What is Agentic RAG?](https://weaviate.io/blog/what-is-agentic-rag)_
+
+A simple RAG depends on the searched context. However, the context is not always retrieved correctly due to inaccurate or complex questions. To address this issue, we can leverage "divid-and-conquer" strategy to transform a complex question into multiple simple ones. This is the main idea of Agentic RAG, which is a framework that enables LLMs to reformulate their queries and self-query to improve the performance of RAG.
+
+In this section, we develop a simple Agentic RAG system with LlamaIndex. The code is available [here](https://github.com/llamaindex/llamaindex/blob/main/examples/rag/agent.py).
+
 ## Challenges for RAG
 Although RAG is a powerful approach to augment LLMs' knowledge, it also has some challenges. For example, **the limited context size** is not enough to generate a full tech report. 
 
+Here we list some challenges for RAG:
+- Inaccurate and complex questions
+    - Agentic RAG [[3,4](#references)]: rewrite questions or transform a complex to multiple simple ones.
+- Limited context size
+    - Prompt compression [[6,7](#references)]: identifies and removes unimportant tokens from context.
+    - 
 
 ## References
 1. [What Is Retrieval Augmented Generation, or RAG?](https://www.databricks.com/glossary/retrieval-augmented-generation-rag) 
@@ -42,4 +59,8 @@ Although RAG is a powerful approach to augment LLMs' knowledge, it also has some
     - [Tutorial: Building a RAG pipeline](https://docs.llamaindex.ai/en/stable/understanding/rag/)
     - [Tutorial: Building an agent](https://docs.llamaindex.ai/en/stable/understanding/agent/)
     - [Video: Building and deploying multi-agent RAG systems in 2024 with LlamaIndex](https://www.youtube.com/watch?v=lqRTCxsKBwc)
-3. [Agentic RAG: turbocharge your RAG with query reformulation and self-query!](https://huggingface.co/learn/cookbook/agent_rag)
+3. [What is Agentic RAG?](https://weaviate.io/blog/what-is-agentic-rag)
+4. [Agentic RAG: turbocharge your RAG with query reformulation and self-query!](https://huggingface.co/learn/cookbook/agent_rag)
+5. **[ICLR 2025]** [Inference Scaling for Long-Context Retrieval Augmented Generation](https://openreview.net/forum?id=FSjIrOm1vz)
+6. **[EMNLP 2023]** [LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models](https://www.microsoft.com/en-us/research/blog/llmlingua-innovating-llm-efficiency-with-prompt-compression/)
+7. **[EMNLP 2023]** [Compressing Context to Enhance Inference Efficiency of Large Language Models](https://arxiv.org/abs/2310.06201)
