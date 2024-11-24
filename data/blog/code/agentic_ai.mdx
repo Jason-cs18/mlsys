@@ -28,8 +28,24 @@ In this article, we will explore the capabilities of large language models (LLMs
 Full code samples are available on [GitHub](https://github.com/Jason-cs18/mlsys_code/tree/main/agentic_ai).
 
 ## What is an autonomous agent?
+An autonmous agent is a program or system that is designed to act independently and make decisions without direct human intervention. Unlike a simple chatbot, an autonomous agent can perform complex tasks, such as managing a company's supply chain, analyzing large datasets, or even developing software.
+
+![](https://lilianweng.github.io/posts/2023-06-23-agent/agent-overview.png)
+
+An autonmous agent uses LLM functions as the brain and integrates with several key components: planning, memory, and tool use.
+
+### Planning
+Planning is the process of determining the sequence of actions that will achieve a goal. In the context of an autonomous agent, planning involves subgoal decomposition and action refinement.
+
+### Memory
+Memory enables an autonomous agent to retain and recall (infinite) information over extended periods. Usually, the memory is implemented as a external vector store.
+
+### Tool use
+Tool use is the ability to call external API for extra information that is missing from the agent's current knowledge, including current information, code execution capabilities, and more.
 
 ## Which tasks are suitable for autonomous agents?
+
+In practice, autonomous agents excel at handling tasks that are _repetitive and demand significant manual effort_. For instance, a company can leverage an autonomous agent to efficiently manage its supply chain, analyze extensive datasets, and even assist in software development.
 
 ## Building an autonomous agent with Dify
 
