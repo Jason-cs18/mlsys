@@ -15,14 +15,10 @@ In this article, we will explore the capabilities of large language models (LLMs
     - [Memory](#memory)
     - [Tool use](#tool-use)
 - [Which tasks are suitable for autonomous agents?](#which-tasks-are-suitable-for-autonomous-agents)
-- [Building an autonomous agent with Dify](#building-an-autonomous-agent-with-dify)
+- [Building an autonomous agent on Dify](#building-an-autonomous-agent-on-dify)
     - [Researcher](#researcher)
     - [Data Analysis](#data-analysis)
     - [Full-Stack Developer](#full-stack-developer)
-- [Building an autonomous agent with Autogen](#building-an-autonomous-agent-with-autogen)
-    - [Researcher](#researcher-1)
-    - [Data Analysis](#data-analysis-1)
-    - [Full-Stack Developer](#full-stack-developer-1)
 - [Conclusion](#conclusion)
 - [References](#references)
 
@@ -50,17 +46,29 @@ Tool use is the ability to call external API for extra information that is missi
 
 In practice, autonomous agents excel at handling tasks that are _repetitive and demand significant manual effort_. For instance, a company can leverage an autonomous agent to efficiently manage its supply chain, analyze extensive datasets, and even assist in software development.
 
-## Building an autonomous agent with Dify
+## Building an autonomous agent on Dify
+
+Developing an autonmous agent on Dify is similar to declarative programming. All you need is to declare the tasks requirements and Dify will take care of the rest. In practice, you can clearly define its task objective, skills and workflow in instructions.
 
 ### Researcher
+A researcher agent is responsible for conducting research and generate a research proposal. Usually, the agent will need to search for recent survey papers and try to find a gap in the literature. The agent will then generate a research proposal based on the findings.
 
-### Data Analysis
+```markdown
+You are an expreienced machine learning researcher and published more than 100 papers. Your task is to generate a research proposal for a new research project. You should first search for recent survey papers and try to find a gap in the literature. Then, you should generate a research proposal based on the findings.
 
-### Full-Stack Developer
+## Skills
+- Search for recent survey papers on `arxiv` using the `arxiv` API.
+- Search for potential solutions on `arxiv` using the `arxiv` API.
 
-## Building an autonomous agent with Autogen
-
-### Researcher
+## Workflow
+Ask the user which stocks with the interested problem they want to search for. Subsquently, performing the following steps in sequences:
+1. Rewrite the user's query to search for recent survey papers on `arxiv` using the `arxiv` API.
+2. Search for recent survey papers on `arxiv` using the `arxiv` API.
+3. Summary the unaddressed problems in the survey papers.
+4. Ask the user which promising problems they want to dive into.
+5. Search for potential solutions on `arxiv` using the `arxiv` API.
+6. Summary the potential solutions and write a research proposal.
+```
 
 ### Data Analysis
 
