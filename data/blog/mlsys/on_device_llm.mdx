@@ -14,7 +14,8 @@ In this post, we will concentrate on the second trend and present some recent an
 
 - [How to run LLMs?](#how-to-run-llms)
 - [On-device LLM inference](#on-device-llm-inference)
-- [Open-source](#open-source)
+- [Open-source inference engines](#open-source-inference-engines)
+- [Examples for llama.cpp](#examples-for-llama-.-cpp)
 - [References](#references)
 
 </details>
@@ -26,14 +27,18 @@ On NVIDIA GPU, how to run a LLM?
 ## On-device LLM inference
 challenges - representative works - insights
 
-## Open-source
+## Open-source inference engines
 
 |Inference engine|Supported devices|Heterogenous computing|`#LLM`|Optimizations|
 |:--:|:---:|:---:|:---:|:---:|
 |[llama.cpp](https://github.com/ggerganov/llama.cpp)|NVIDIA GPU, Intel CPU, Apple silicon, Android|:---:|:---:|:---:|
 |[PowerInfer](https://github.com/SJTU-IPADS/PowerInfer)|:---:|:---:|:---:|:---:|
 
+## Examples for llama.cpp
+
 ## References
 1. Yi et al. ["EdgeMoE: Fast On-Device Inference of MoE-based Large Language Models"](https://arxiv.org/abs/2308.14352) arXiv preprint arXiv:2308.14352 (2023).
 2. Song et al. ["PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU"](https://dl.acm.org/doi/pdf/10.1145/3694715.3695964) SOSP 2024.
 3. Xue et al. ["PowerInfer-2: Fast Large Language Model Inference on a Smartphone"](https://arxiv.org/abs/2406.06282) arXiv preprint arXiv:2406.06282 (2024).
+4. ggerganov. ["llama.cpp: LLM inference in C/C++"](https://github.com/ggerganov/llama.cpp) Github repo.
+5. SJTU-IPADS. ["PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU"](https://github.com/SJTU-IPADS/PowerInfer) Github repo.
