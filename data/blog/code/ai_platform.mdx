@@ -11,6 +11,8 @@ Usually, deploying a deep learning model involves several steps, including data 
 
 In this post, we provide a step-by-step guide to building a scalable and unified AI platform using Ray. This platform enables you to scale different workloads within a single line of code, making it easier to deploy and manage deep learning models in production.
 
+Full code is available [here](https://github.com/Jason-cs18/mlsys_code/tree/main/ai_platform).
+
 <details>
 <summary><b>Table of Contents</b> (click to open)</summary>
 
@@ -19,13 +21,8 @@ In this post, we provide a step-by-step guide to building a scalable and unified
     - [Pre-requisite](#pre-requisite)
     - [Install Ray Cluster](#install-ray-cluster)
     - [Setup Ray Cluster](#setup-ray-cluster)
-- [Submit AI jobs via ray job submission SDK](#submit-ai-jobs-via-ray-job-submission-sdk)
-- [Use case: data analysis on MNIST dataset](#use-case-data-analysis-on-mnist-dataset)
-- [Use case: multimodal data analysis with LanceDB](#use-case-multimodal-data-analysis-with-lancedb)
-- [Use case: train a ResNet on MNIST dataset](#use-case-train-a-resnet-on-mnist-dataset)
-- [Use case: inference on MNIST dataset](#use-case-inference-on-mnist-dataset)
-- [Use case: serve a ResNet with Ray Serve](#use-case-serve-a-resnet-with-ray-serve)
-- [Use case: serve a LLM with vLLM](#use-case-serve-a-llm-with-vllm)
+    - [Submit AI jobs via ray job submission SDK](#submit-ai-jobs-via-ray-job-submission-sdk)
+- [Hands-on examples](#hands-on-examples)
 - [Monitoring and logging](#monitoring-and-logging)
 - [References](#references)
 
@@ -37,16 +34,13 @@ Ray is an open-source distributed computing framework designed to streamline the
 Today, Ray has been widely adopted by numerous companies, including industry leaders such as Uber, OpenAI, and Microsoft.
 
 ![](https://docs.ray.io/en/latest/_images/map-of-ray.svg)
-<p style="text-align: center">Ray Overview</p>
 
 Ray Cluster integrates seamlessly with Kubernetes, enabling the deployment of AI platforms both on-premises and in the cloud. Additionally, it offers a scalable and fault-tolerant storage system, simplifying the management of large-scale data and models.
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/x1nibL49E8dNHCUNAImfqFYlWdyjE75UclqPVqzUjicbd4f6144LDKlNCZujc6RaTa5N8rKdBJzribXiaIeTLttHwg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1)
-<p style="text-align: center">Ray Cluster on Kubernets</p>
 
 After running Ray Cluster, users can easily submit their AI jobs via Ray job submission SDK.
 ![](https://mmbiz.qpic.cn/mmbiz_png/x1nibL49E8dNHCUNAImfqFYlWdyjE75Uc53G94uQXQBqgvk2bgUatWYhKDwbkHLyibvibGibeHUicRRgFNwAowpMAHw/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1)
-<p style="text-align: center">Ray Cluster Workflow</p>
 
 ## Install Ray
 
@@ -56,22 +50,19 @@ After running Ray Cluster, users can easily submit their AI jobs via Ray job sub
 
 ### Setup Ray Cluster
 
-## Submit AI jobs via ray job submission SDK
+### Submit AI jobs via ray job submission SDK
 - How to handle different dependencies?
 
-## Use case: data analysis on MNIST dataset
+## Hands-on examples
 
-## Use case: multimodal data analysis with LanceDB
-- [LanceDB: an open-source vector database for AI that's designed to store, manage, query and retrieve embeddings on large-scale multi-modal data. ](https://lancedb.github.io/lancedb/)
-- [Transforming Multimodal Data Management with LanceDB-Ray](https://www.youtube.com/watch?v=xmTFEzAh8ho)
-
-## Use case: train a ResNet on MNIST dataset
-
-## Use case: inference on MNIST dataset
-
-## Use case: serve a ResNet with Ray Serve
-
-## Use case: serve a LLM with vLLM
+- [Data analysis on MNIST dataset]()
+- [Multimodal data analysis with LanceDB]()
+    - [LanceDB: an open-source vector database for AI that's designed to store, manage, query and retrieve embeddings on large-scale multi-modal data. ](https://lancedb.github.io/lancedb/)
+    - [Transforming Multimodal Data Management with LanceDB-Ray](https://www.youtube.com/watch?v=xmTFEzAh8ho)
+- [Train a ResNet on MNIST dataset]()
+- [Inference on MNIST dataset]()
+- [Serve a ResNet with Ray Serve]()
+- [Serve a LLM with vLLM]()
 
 ## Monitoring and logging
 
