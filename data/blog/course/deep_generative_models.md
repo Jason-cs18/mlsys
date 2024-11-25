@@ -12,12 +12,15 @@ Learning notes for [MIT 6.S978 Fall 2024 Deep Generative Models](https://mit-6s9
 <summary><b>Table of Contents</b> (click to open)</summary>
 
 - [Introduction](#introduction)
-- [Variational Autoencoder (VAE)](#Variational-Autoencoder-VAE)
-- [Autoregressive (AR) Models](#Autoregressive-AR-Models)
-- [Generative Adversarial Network (GAN)](#Generative-Adversarial-Network-GAN)
-- [Energy-based Models, Score matching, Diffusion Models](#Energy-based-Models-Score-matching-Diffusion-Models)
-- [Ensuring Data Ownership in Generative Models](#Ensuring-Data-Ownership-in-Generative-Models)
-- [Consistency Models](#Consistency-Models)
+- [Variational Autoencoder (VAE)](#variational-autoencoder-vae)
+  - [Generative models](#generative-models)
+  - [Required readings](#required-readings)
+- [Autoregressive (AR) Models](#autoregressive-ar-models)
+  - [Required readings](#required-readings-1)
+- [Generative Adversarial Network (GAN)](#generative-adversarial-network-gan)
+- [Energy-based Models, Score matching, Diffusion Models](#energy-based-models-score-matching-diffusion-models)
+- [Ensuring Data Ownership in Generative Models](#ensuring-data-ownership-in-generative-models)
+- [Consistency Models](#consistency-models)
 
 </details>
 
