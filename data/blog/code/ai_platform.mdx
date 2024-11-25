@@ -9,48 +9,72 @@ Deep learning has been demonstrated to be effective in solving a wide range of p
 
 Usually, deploying a deep learning model involves several steps, including data preprocessing, model training, model evaluation, and model serving. Each step requires a different type of hardware and software, and the process can be time-consuming and error-prone.
 
-In this post, we provide a step-by-step guide to building a scalable and unified AI platform using Ray Cluster. This platform enables you to scale different workloads within a single line of code, making it easier to deploy and manage deep learning models in production.
+In this post, we provide a step-by-step guide to building a scalable and unified AI platform using Ray. This platform enables you to scale different workloads within a single line of code, making it easier to deploy and manage deep learning models in production.
 
 <details>
 <summary><b>Table of Contents</b> (click to open)</summary>
 
-- [Why Ray Cluster?](#why-ray-cluster)
-- [Pre-requisite](#pre-requisite)
-- [Install Ray Cluster](#install-ray-cluster)
-- [Setup Ray Cluster](#setup-ray-cluster)
-- [Use Case: Data Analysis on MNIST Dataset](#use-case-data-analysis-on-mnist-dataset)
-- [Use Case: Multimodal Data Analysis with LanceDB](#use-case-multimodal-data-analysis-with-lancedb)
-- [Use Case: Train a ResNet on MNIST Dataset](#use-case-train-a-resnet-on-mnist-dataset)
-- [Use Case: Inference on MNIST Dataset](#use-case-inference-on-mnist-dataset)
-- [Use Case: Serve a ResNet with Ray Serve](#use-case-serve-a-resnet-with-ray-serve)
-- [Use Case: Serve a LLM with vLLM](#use-case-serve-a-llm-with-vllm)
-- [Monitoring and Logging](#monitoring-and-logging)
+- [Why Ray?](#why-ray)
+- [Install Ray](#install-ray)
+    - [Pre-requisite](#pre-requisite)
+    - [Install Ray Cluster](#install-ray-cluster)
+    - [Setup Ray Cluster](#setup-ray-cluster)
+- [Submit AI jobs via ray job submission SDK](#submit-ai-jobs-via-ray-job-submission-sdk)
+- [Use case: data analysis on MNIST dataset](#use-case-data-analysis-on-mnist-dataset)
+- [Use case: multimodal data analysis with LanceDB](#use-case-multimodal-data-analysis-with-lancedb)
+- [Use case: train a ResNet on MNIST dataset](#use-case-train-a-resnet-on-mnist-dataset)
+- [Use case: inference on MNIST dataset](#use-case-inference-on-mnist-dataset)
+- [Use case: serve a ResNet with Ray Serve](#use-case-serve-a-resnet-with-ray-serve)
+- [Use case: serve a LLM with vLLM](#use-case-serve-a-llm-with-vllm)
+- [Monitoring and logging](#monitoring-and-logging)
 - [References](#references)
 
 </details>
 
-## Why Ray Cluster?
+## Why Ray?
+Ray is an open-source distributed computing framework designed to streamline the development of distributed applications for all AI workloads. It achieves this by offering a three-layer architecture: Ray AI libraries, Ray Core, and Ray Cluster. With Ray, users can concentrate on building their AI applications without having to concern themselves with the complexities of the underlying cloud infrastructure.
 
-## Pre-requisite
+Today, Ray has been widely adopted by numerous companies, including industry leaders such as Uber, OpenAI, and Microsoft.
 
-## Install Ray Cluster
+![](https://docs.ray.io/en/latest/_images/map-of-ray.svg)
+<p style="text-align: center">Ray Overview</p>
 
-## Setup Ray Cluster
+Ray Cluster integrates seamlessly with Kubernetes, enabling the deployment of AI platforms both on-premises and in the cloud. Additionally, it offers a scalable and fault-tolerant storage system, simplifying the management of large-scale data and models.
 
-## Use Case: Data Analysis on MNIST Dataset
+![](https://mmbiz.qpic.cn/mmbiz_png/x1nibL49E8dNHCUNAImfqFYlWdyjE75UclqPVqzUjicbd4f6144LDKlNCZujc6RaTa5N8rKdBJzribXiaIeTLttHwg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1)
+<p style="text-align: center">Ray Cluster on Kubernets</p>
 
-## Use Case: Multimodal Data Analysis with LanceDB
+After running Ray Cluster, users can easily submit their AI jobs via Ray job submission SDK.
+![](https://mmbiz.qpic.cn/mmbiz_png/x1nibL49E8dNHCUNAImfqFYlWdyjE75Uc53G94uQXQBqgvk2bgUatWYhKDwbkHLyibvibGibeHUicRRgFNwAowpMAHw/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1)
+<p style="text-align: center">Ray Cluster Workflow</p>
+
+## Install Ray
+
+### Pre-requisite
+
+### Install Ray Cluster
+
+### Setup Ray Cluster
+
+## Submit AI jobs via ray job submission SDK
+- How to handle different dependencies?
+
+## Use case: data analysis on MNIST dataset
+
+## Use case: multimodal data analysis with LanceDB
 - [LanceDB: an open-source vector database for AI that's designed to store, manage, query and retrieve embeddings on large-scale multi-modal data. ](https://lancedb.github.io/lancedb/)
 - [Transforming Multimodal Data Management with LanceDB-Ray](https://www.youtube.com/watch?v=xmTFEzAh8ho)
 
-## Use Case: Train a ResNet on MNIST Dataset
+## Use case: train a ResNet on MNIST dataset
 
-## Use Case: Inference on MNIST Dataset
+## Use case: inference on MNIST dataset
 
-## Use Case: Serve a ResNet with Ray Serve
+## Use case: serve a ResNet with Ray Serve
 
-## Use Case: Serve a LLM with vLLM
+## Use case: serve a LLM with vLLM
 
-## Monitoring and Logging
+## Monitoring and logging
 
 ## References
+1. Welcome to Ray! — Ray 2.39.0. (n.d.). https://docs.ray.io/en/latest/index.html
+2. 王万兴. (n.d.). 基于 RaY 的大规模离线推理. Weixin Official Accounts Platform. https://mp.weixin.qq.com/s/pS5RJCA5O_s6pPcib0JsuQ
