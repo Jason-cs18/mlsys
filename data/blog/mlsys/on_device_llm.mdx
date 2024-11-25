@@ -5,7 +5,7 @@ tags: ['LLM', 'MLSys', 'on-device']
 draft: false
 summary: 'Recent advances for on-device LLM inference'
 ---
-Deploying language models (LLMs) on devices is gaining significant attention due to the increasing demand for accessibility and privacy. This field is seeing two main trends: one involves creating smaller versions of LLMs, while the other focuses on designing efficient systems to run LLMs on devices.
+Deploying large language models (LLMs) on devices is gaining significant attention due to the increasing demand for accessibility and privacy. This field is seeing two main trends: one involves creating smaller versions of LLMs, while the other focuses on designing efficient systems to run LLMs on devices.
 
 In this post, we will concentrate on the second trend and present some recent and interesting works related to on-device LLM inference.
 
@@ -30,10 +30,29 @@ challenges - representative works
 
 |Inference engine|Supported devices|Heterogenous computing|`#LLM`|Optimizations|
 |:--:|:---:|:---:|:---:|:---:|
-|[`llama.cpp`](https://github.com/ggerganov/llama.cpp)![Github stars](https://img.shields.io/github/stars/ggerganov/llama.cpp.svg)![Github forks](https://img.shields.io/github/forks/ggerganov/llama.cpp.svg)|NVIDIA GPU, Intel CPU, Apple silicon, Android|:---:|:---:|:---:|
-|[`PowerInfer`](https://github.com/SJTU-IPADS/PowerInfer)![Github stars](https://img.shields.io/github/stars/SJTU-IPADS/PowerInfer.svg)![Github forks](https://img.shields.io/github/forks/SJTU-IPADS/PowerInfer.svg)|:---:|:---:|:---:|:---:|
+|[llama.cpp](https://github.com/ggerganov/llama.cpp)|NVIDIA GPU, Intel CPU, Apple silicon, Android|:---:|:---:|:---:|
+|[PowerInfer](https://github.com/SJTU-IPADS/PowerInfer)|:---:|:---:|:---:|:---:|
+
+## Citation
+Cited as:
+> Lu, Yan. (Nov 2024). On-Device Large Language Models. Yan'Log. https://jason-cs18.github.io/mlsys/blog/mlsys/on_device_llm.
+
+or
+
+```latex
+@article{lu2024devicellm,
+  title   = "On-Device Large Language Models.",
+  author  = "Lu, Yan",
+  journal = "https://jason-cs18.github.io/mlsys/",
+  year    = "2024",
+  month   = "Nov",
+  url     = "https://jason-cs18.github.io/mlsys/blog/mlsys/on_device_llm"
+}
+```
 
 ## References
 [1] Yi et al. ["EdgeMoE: Fast On-Device Inference of MoE-based Large Language Models"](https://arxiv.org/abs/2308.14352) arXiv preprint arXiv:2308.14352 (2023).
+
 [2] Song et al. ["PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU"](https://dl.acm.org/doi/pdf/10.1145/3694715.3695964) SOSP 2024.
+
 [3] Xue et al. ["PowerInfer-2: Fast Large Language Model Inference on a Smartphone"](https://arxiv.org/abs/2406.06282) arXiv preprint arXiv:2406.06282 (2024).
