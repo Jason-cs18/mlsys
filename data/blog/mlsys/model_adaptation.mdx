@@ -1,0 +1,38 @@
+---
+title: Model Adaptation for Generative AI
+date: '2024-11-26'
+tags: ['deep learning', 'foundation models', 'model adaptation']
+draft: false
+summary: 'Recent advances on model adaptation for generative AI'
+---
+In practice, we cannot assume that the testing data distribution is the same as the training data distribution. Therefore, it is crucial to adapt the model to the new data distribution. In this post, we will discuss recent advances on model adaptation for generative AI.
+
+## Model Adaptation
+
+Model adaptation aims to align model behaviors with the target data distribution. Common techniques include fine-tuning, model merging, knowledge editing, and test-time training.
+
+## NLP
+- Fine-tuning:
+    - **LoRA** ([Hu et al.](https://arxiv.org/abs/2106.09685)) xxx
+    - **QLoRA** ([Dettmers et al](https://arxiv.org/pdf/2305.14314)) xxx
+    - **DoRA** ([Liu et al.](https://arxiv.org/abs/2402.09353)) xxx
+- Model merging:
+    - **Model soups** ([Wortsman et al.](https://arxiv.org/pdf/2203.05482)) xxx
+    - **Task vectors** ([Ilharco et al.](https://arxiv.org/pdf/2212.04089)) xxx
+- Knowledge editing:
+    - **SERAC** ([Mitchell et al.](https://arxiv.org/pdf/2206.06520)) xxx
+    - **MEMIT** ([Meng et al.](https://arxiv.org/pdf/2210.07229)) xxx
+- Test-time training:
+    - **TTTLM** ([Hardt et al.](https://arxiv.org/abs/2305.18466)) xxx
+
+## Vision
+- Knowledge editing:
+    - **ESD** ([Gandikota et al.](https://openaccess.thecvf.com/content/ICCV2023/papers/Gandikota_Erasing_Concepts_from_Diffusion_Models_ICCV_2023_paper.pdf)) xxx
+    - **EMCID** ([Xiong et al.](https://arxiv.org/abs/2403.13807)) xxx
+- Test-time training:
+    - **TTT** ([Sun et al.](https://arxiv.org/pdf/1909.13231)) xxx
+    - **TTT_MAE** ([Gandelsman et al.](https://arxiv.org/pdf/2209.07522)) xxx
+    - **Video_TTT** ([Wang et al.](https://arxiv.org/abs/2307.05014)) xxx
+
+## References
+1. pittisl. ["Generative AI Roadmap"](https://github.com/pittisl/Generative-AI-Tutorial?tab=readme-ov-file). Github repo.
