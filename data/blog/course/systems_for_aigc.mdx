@@ -84,4 +84,20 @@ In the awesome [talk](https://www.microsoft.com/en-us/research/academic-program/
 8. Use the active voice and simple direct language.
 ```
 
+## Further readings
+
+### AI accelerators
+
+### AI compiler
+
+**PyTorch 2.x** introduces `torch.compile`, a powerful feature designed to optimize the performance of PyTorch models during both inference and training. This new capability can deliver a minimum of 30% speedup for machine learning models. The compilation process consists of three main stages: graph acquisition, graph lowering, and graph compilation.
+
+1. Graph acquisition: Convert the PyTorch model into a graph representation.
+2. Graph lowering: Map PyTorch models to CUDA/Triton operations.
+3. Graph compilation: Determine the optimal execution plan for the graph.
+
+![](https://pytorch.org/assets/images/pytorch-2.0-img4.jpg)
+_image source: [PyTorch 2.0](https://pytorch.org/blog/pytorch-2.0/)_
+
 ## References
+1. chenzomi12. ["AI System & AI Infra"](https://github.com/chenzomi12/AISystem). Github repo.
