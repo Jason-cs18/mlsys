@@ -8,19 +8,19 @@ interface Project {
 const projectsData: Project[] = [
   {
     title: 'Efficient Avatar Synthesis',
-    description: `Efficiently serving 2D and 3D avatars on mobile phones.`,
+    description: `Efficiently serving 2D and 3D avatars on resource-constrained devices.`,
     imgSrc: '/static/images/time-machine.jpg',
     href: 'https://www.google.com',
   },
   {
-    title: 'Reliable On-Device AI',
+    title: 'Reliable On-Device Inference',
     description: `Improving robustness of on-device inference in dynamic environments`,
     imgSrc: '/static/images/time-machine.jpg',
     href: '/blog/the-time-machine',
   },
   {
-    title: 'Efficient Serving Diffusion Models',
-    description: `Accelerating diffusion models inference on heterogeneous devices`,
+    title: 'Trustworthy AI Agents',
+    description: `Building trustworthy AI agents that can be self-evolution in the real world.`,
     imgSrc: '/static/images/time-machine.jpg',
     href: '/blog/the-time-machine',
   },
